@@ -1,0 +1,6 @@
+/* Projects Section */
+.work p {
+  font-size: var(--font-base);
+  margin-top: -1rem;
+  margin-bottom: 2rem;
+}
