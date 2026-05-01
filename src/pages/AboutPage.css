@@ -1,0 +1,41 @@
+.about-page-container {
+  padding: 120px 2rem 80px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.page-header {
+  margin-bottom: 5rem;
+  text-align: center;
+}
+
+.extended-about {
+  margin-top: 6rem;
+  padding: 4rem;
+  background: white;
+  border-radius: var(--card-radius);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--card-shadow);
+}
+
+.extended-about h3 {
+  font-family: var(--font-display);
+  font-size: var(--font-2xl);
+  margin-bottom: 2rem;
+}
+
+.extended-about p {
+  color: var(--text-secondary);
+  font-size: var(--font-lg);
+  line-height: 1.8;
+  max-width: 800px;
+}
+
+@media (max-width: 768px) {
+  .about-page-container {
+    padding-top: 100px;
+  }
+  .extended-about {
+    padding: 2rem;
+  }
+}

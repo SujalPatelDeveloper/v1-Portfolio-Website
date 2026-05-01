@@ -1,16 +1,17 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Navbar.css';
 
 const Navbar = () => {
   return (
     <header className="navbar-header">
       <div className="nav-container glass">
-        <a href="#" className="logo">SUJAL.</a>
+        <Link to="/" className="logo">SUJAL.</Link>
         <nav className="nav-links">
-          <a href="#home">Home</a>
-          <a href="#work">Projects</a>
-          <a href="#about">About</a>
-          <a href="#contact" className="nav-cta">Let's Talk</a>
+          <Link to="/">Home</Link>
+          <Link to="/projects">Projects</Link>
+          <Link to="/about">About</Link>
+          <Link to="/contact" className="nav-cta">Let's Talk</Link>
         </nav>
       </div>
     </header>
@@ -18,3 +19,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+

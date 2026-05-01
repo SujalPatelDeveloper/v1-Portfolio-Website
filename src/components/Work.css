@@ -1,3 +1,23 @@
+.work-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.work-header .section-title {
+  margin-bottom: 0;
+}
+
+.view-all-btn {
+  font-size: 12px;
+  padding: 0.6rem 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));

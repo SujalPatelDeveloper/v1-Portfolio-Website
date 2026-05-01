@@ -1,3 +1,16 @@
+.about-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.about-header .section-title {
+  margin-bottom: 0;
+}
+
 .about-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
