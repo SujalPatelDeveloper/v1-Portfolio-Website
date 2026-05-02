@@ -8,10 +8,11 @@ import Footer from './components/Footer';
 import DoodleBackground from './components/DoodleBackground';
 import ScrollToTop from './components/ScrollToTop';
 import ScrollTopButton from './components/ScrollTopButton';
+import CustomCursor from './components/CustomCursor';
+import Preloader from './components/Preloader';
 import ProjectsPage from './pages/Projects';
 import AboutPage from './pages/About';
 import ContactPage from './pages/Contact';
-import CustomCursor from './components/CustomCursor';
 import './style.css';
 
 const Home = () => (
@@ -24,6 +25,7 @@ const Home = () => (
 
 function App() {
   const [refreshKey, setRefreshKey] = useState(0);
+  const [loading, setLoading] = useState(true);
 
   const handleRefreshAnimations = () => {
     setRefreshKey(prev => prev + 1);
@@ -31,21 +33,24 @@ function App() {
 
   return (
     <Router>
-      <ScrollToTop />
-      <div className="app-root">
-        <CustomCursor />
-        <DoodleBackground />
-        <Navbar />
-        <main key={refreshKey}>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/projects" element={<ProjectsPage />} />
-            <Route path="/about" element={<AboutPage />} />
-            <Route path="/contact" element={<ContactPage />} />
-          </Routes>
-        </main>
-        <Footer />
-        <ScrollTopButton onScrollTop={handleRefreshAnimations} />
+      <div className="app-wrapper">
+        <ScrollToTop />
+        {loading && <Preloader onFinish={() => setLoading(false)} />}
+        <div className="app-root">
+          <CustomCursor />
+          <DoodleBackground />
+          <Navbar />
+          <main key={refreshKey}>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/projects" element={<ProjectsPage />} />
+              <Route path="/about" element={<AboutPage />} />
+              <Route path="/contact" element={<ContactPage />} />
+            </Routes>
+          </main>
+          <Footer />
+          <ScrollTopButton onScrollTop={handleRefreshAnimations} />
+        </div>
       </div>
     </Router>
   );

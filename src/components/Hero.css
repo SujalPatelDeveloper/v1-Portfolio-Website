@@ -1,9 +1,9 @@
 .hero {
-  min-height: 100vh;
+  min-height: 90vh; /* Reduced min-height to pull content up */
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 120px 2rem 60px;
+  padding: 40px 2rem 40px;
   position: relative;
 }
 
@@ -138,7 +138,7 @@
 .character-frame {
   position: relative;
   width: 100%;
-  max-width: none;
+  max-width: 700px;
   background: transparent !important;
   border: none !important;
   border-radius: 0;
@@ -150,13 +150,15 @@
 }
 
 .hero-char-main {
-  width: 160%; /* Even bigger */
+  width: 140%;
   height: auto;
   display: block;
-  filter: drop-shadow(20px 20px 40px rgba(0,0,0,0.1)) brightness(1.05) contrast(1.05);
-  transform: translate(30%, 20%); /* Further to bottom right */
+  filter: drop-shadow(20px 20px 40px rgba(0,0,0,0.1)) brightness(1.08) contrast(1.08);
+  transform: translate(20%, 5%); /* Reduced vertical translation */
   mix-blend-mode: multiply;
   pointer-events: none;
+  position: relative;
+  z-index: 10;
 }
 
 .doodle-spark-top {
@@ -165,6 +167,7 @@
   right: -30px;
   width: 80px;
   animation: rotate 10s infinite linear;
+  z-index: 1;
 }
 
 .doodle-spark-bottom {
@@ -173,6 +176,7 @@
   left: -40px;
   width: 60px;
   opacity: 0.5;
+  z-index: 1;
 }
 
 @keyframes rotate {
@@ -183,7 +187,7 @@
 @media (max-width: 1024px) {
   .hero-poster-container {
     grid-template-columns: 1fr;
-    gap: 6rem;
+    gap: 4rem;
   }
   
   .hero-typography {
@@ -210,14 +214,54 @@
   .doodle-arrow {
     display: none;
   }
+
+  .hero-char-main {
+    width: 100%;
+    transform: translate(0, 0);
+  }
 }
 
 @media (max-width: 768px) {
+  .hero {
+    padding-top: 120px;
+    padding-bottom: 60px;
+  }
+
   .poster-title {
-    font-size: 4rem;
+    font-size: clamp(3rem, 12vw, 4.5rem);
+  }
+
+  .cta-group {
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .intro-block {
+    padding: 1.25rem;
+    box-shadow: 6px 6px 0px var(--border-color);
+  }
+
+  .hero-visual-poster {
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .poster-title {
+    font-size: clamp(2.2rem, 12vw, 2.8rem);
+    white-space: normal; /* Allow wrapping on very small screens */
+    line-height: 1;
   }
   
   .hero {
-    padding-top: 100px;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 }

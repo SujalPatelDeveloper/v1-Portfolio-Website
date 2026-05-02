@@ -66,6 +66,20 @@
 
 @media (max-width: 768px) {
   .contact-page-container {
-    padding-top: 100px;
+    padding: 100px 1.5rem 60px;
+  }
+
+  .contact-method p {
+    font-size: var(--font-lg);
+  }
+
+  .social-links-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-header h1 {
+    font-size: var(--font-2xl);
   }
 }

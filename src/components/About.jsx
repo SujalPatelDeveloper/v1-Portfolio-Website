@@ -15,10 +15,10 @@ const About = () => {
       <div className="about-grid">
         <motion.div 
           className="about-content"
-          initial={{ opacity: 0, x: -50 }}
+          initial={{ opacity: 0, x: -60 }}
           whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
         >
           <p className="about-text">
             I'm an Aspiring Full-Stack Developer skilled in React, Next.js, and real-time applications using WebSockets. 
@@ -31,10 +31,10 @@ const About = () => {
                 <motion.span 
                   key={skill} 
                   className="skill-tag"
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ delay: i * 0.1 }}
+                  transition={{ delay: 0.2 + i * 0.1 }}
                 >
                   {skill}
                 </motion.span>
@@ -44,10 +44,10 @@ const About = () => {
         </motion.div>
         <motion.div 
           className="about-visual"
-          initial={{ opacity: 0, x: 50 }}
+          initial={{ opacity: 0, x: 60 }}
           whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
         >
           <div className="info-card glass">
             <div className="info-item">

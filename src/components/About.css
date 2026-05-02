@@ -91,3 +91,36 @@
     gap: 4rem;
   }
 }
+
+@media (max-width: 768px) {
+  .about-text {
+    font-size: var(--font-base);
+    margin-bottom: 2rem;
+  }
+
+  .info-card {
+    padding: 2rem;
+    gap: 2rem;
+  }
+
+  .info-value {
+    font-size: var(--font-lg);
+  }
+
+  .about-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-grid {
+    gap: 0.75rem;
+  }
+
+  .skill-tag {
+    padding: 0.5rem 1rem;
+    font-size: 12px;
+  }
+}

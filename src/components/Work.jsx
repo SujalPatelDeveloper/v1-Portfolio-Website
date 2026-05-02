@@ -45,10 +45,14 @@ const Work = () => {
           <motion.div 
             key={index} 
             className="project-card"
-            initial={{ opacity: 0, y: 50 }}
+            initial={{ opacity: 0, y: 60 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: index * 0.2 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ 
+              duration: 0.8, 
+              delay: index * 0.1,
+              ease: [0.16, 1, 0.3, 1] 
+            }}
           >
             <div className="card-image" style={{ backgroundColor: project.color }}>
               <div className="card-pill tag">{project.category}</div>

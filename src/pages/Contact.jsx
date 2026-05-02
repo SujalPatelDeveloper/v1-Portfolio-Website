@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import '../components/Footer.css';
 import './ContactPage.css';
+import ContactForm from '../components/ContactForm';
 
 const ContactPage = () => {
   return (
@@ -19,36 +20,9 @@ const ContactPage = () => {
       </div>
 
       <div className="contact-grid">
-        <motion.div 
-          className="contact-card glass"
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5 }}
-        >
-          <h2 className="section-title">Get in touch</h2>
-          <p className="contact-desc">
-            I'm currently available for freelance work and full-time opportunities. 
-            If you have a project in mind or just want to chat, feel free to reach out!
-          </p>
-          <a href="mailto:hello@sujal.design" className="btn btn-primary contact-btn">
-            Send me an Email
-          </a>
-          
-          <div className="social-links-grid">
-            <a href="#" className="social-box glass">
-              <span>LinkedIn</span>
-            </a>
-            <a href="#" className="social-box glass">
-              <span>Twitter</span>
-            </a>
-            <a href="#" className="social-box glass">
-              <span>GitHub</span>
-            </a>
-            <a href="#" className="social-box glass">
-              <span>Dribbble</span>
-            </a>
-          </div>
-        </motion.div>
+        <div className="form-section">
+          <ContactForm />
+        </div>
 
         <motion.div 
           className="contact-info-list"
@@ -56,17 +30,30 @@ const ContactPage = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.3 }}
         >
-          <div className="contact-method">
-            <h3>Email</h3>
-            <p>hello@sujal.design</p>
+          <div className="contact-card glass mini-info">
+             <h3 className="section-title" style={{ fontSize: '1.5rem', marginBottom: '1.5rem' }}>Direct Links</h3>
+             <a href="mailto:hello@sujal.design" className="btn btn-outline contact-btn" style={{ width: '100%', marginBottom: '1.5rem' }}>
+              hello@sujal.design
+            </a>
+            <div className="social-links-grid">
+              <a href="#" className="social-box glass">
+                <span>LinkedIn</span>
+              </a>
+              <a href="#" className="social-box glass">
+                <span>GitHub</span>
+              </a>
+            </div>
           </div>
-          <div className="contact-method">
-            <h3>Availability</h3>
-            <p>Mon — Fri, 9am — 6pm IST</p>
-          </div>
-          <div className="contact-method">
-            <h3>Based In</h3>
-            <p>Ahmedabad, Gujarat</p>
+
+          <div className="contact-method-group">
+            <div className="contact-method">
+              <h3>Availability</h3>
+              <p>Mon — Fri, 9am — 6pm IST</p>
+            </div>
+            <div className="contact-method">
+              <h3>Based In</h3>
+              <p>Ahmedabad, Gujarat</p>
+            </div>
           </div>
         </motion.div>
       </div>
