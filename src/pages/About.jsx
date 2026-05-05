@@ -102,7 +102,7 @@ const AboutPage = () => {
           >
             <div className="card-label">Overall Stats</div>
             <img 
-              src="https://github-readme-stats-sigma-five.vercel.app/api?username=SujalPatelDeveloper&show_icons=true&theme=tokyonight&hide_border=true&title_color=00df9a&icon_color=00df9a&text_color=ffffff&bg_color=0d1117" 
+              src="https://github-readme-stats-sigma-five.vercel.app/api?username=SujalPatelDeveloper&show_icons=true&theme=default&hide_border=true&title_color=1a1a1a&icon_color=00df9a&text_color=667085&bg_color=ffffff" 
               alt="GitHub Stats" 
             />
           </motion.div>
@@ -113,7 +113,7 @@ const AboutPage = () => {
           >
             <div className="card-label">Language Proficiency</div>
             <img 
-              src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=SujalPatelDeveloper&layout=compact&theme=tokyonight&hide_border=true&title_color=ff7eb3&text_color=ffffff&bg_color=0d1117&langs_count=6" 
+              src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=SujalPatelDeveloper&layout=compact&theme=default&hide_border=true&title_color=1a1a1a&text_color=667085&bg_color=ffffff&langs_count=6" 
               alt="Top Languages" 
             />
           </motion.div>
@@ -126,7 +126,7 @@ const AboutPage = () => {
         >
           <div className="card-label">Contribution Streak</div>
           <img 
-            src="https://github-readme-streak-stats.herokuapp.com/?user=SujalPatelDeveloper&theme=tokyonight&hide_border=true&stroke=00df9a&ring=ff7eb3&fire=ff7eb3&currStreakLabel=00df9a&sideNums=ffffff&sideLabels=ffffff&dates=ffffff&background=0d1117" 
+            src="https://github-readme-streak-stats.herokuapp.com/?user=SujalPatelDeveloper&theme=default&hide_border=true&stroke=00df9a&ring=ff7eb3&fire=ff7eb3&currStreakNum=1a1a1a&currStreakLabel=1a1a1a&sideNums=1a1a1a&sideLabels=1a1a1a&dates=1a1a1a&background=ffffff&v=2" 
             alt="GitHub Streak" 
             loading="lazy"
           />

@@ -152,8 +152,10 @@
   justify-content: center;
   align-items: center;
   min-height: 240px;
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  background: rgba(255, 255, 255, 0.4);
+  background: white;
+  border: 1px solid var(--border-color);
+  border-radius: var(--card-radius);
+  box-shadow: var(--card-shadow);
 }
 
 .card-label {
@@ -184,8 +186,10 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  background: rgba(255, 255, 255, 0.4);
+  background: white;
+  border: 1px solid var(--border-color);
+  border-radius: var(--card-radius);
+  box-shadow: var(--card-shadow);
 }
 
 .streak-container img {
