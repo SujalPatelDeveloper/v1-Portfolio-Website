@@ -83,11 +83,54 @@ const AboutPage = () => {
           <p className="date">2023 – Present | Ahmedabad, Gujarat</p>
           <p className="cgpa">CGPA: 7.43</p>
         </div>
-        <p>
-          My journey in tech is driven by a curiosity for building real-time, interactive systems. 
-          From mastering frontend frameworks like React and Next.js to implementing complex WebSocket synchronization 
-          and full-stack integrations with Supabase, I strive to create software that feels alive and responsive.
-        </p>
+      </motion.div>
+      
+      <motion.div 
+        className="github-stats-section"
+        initial={{ opacity: 1, y: 0 }}
+        animate={{ opacity: 1, y: 0 }}
+      >
+        <div className="stats-header">
+          <h2 className="stats-title">Code Activity</h2>
+          <p className="stats-subtitle">Real-time snapshots of my technical growth and open-source contributions.</p>
+        </div>
+        
+        <div className="stats-grid">
+          <motion.div 
+            className="stats-card glass"
+            whileHover={{ y: -5, transition: { duration: 0.2 } }}
+          >
+            <div className="card-label">Overall Stats</div>
+            <img 
+              src="https://github-readme-stats-sigma-five.vercel.app/api?username=SujalPatelDeveloper&show_icons=true&theme=tokyonight&hide_border=true&title_color=00df9a&icon_color=00df9a&text_color=ffffff&bg_color=0d1117" 
+              alt="GitHub Stats" 
+            />
+          </motion.div>
+
+          <motion.div 
+            className="stats-card glass"
+            whileHover={{ y: -5, transition: { duration: 0.2 } }}
+          >
+            <div className="card-label">Language Proficiency</div>
+            <img 
+              src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=SujalPatelDeveloper&layout=compact&theme=tokyonight&hide_border=true&title_color=ff7eb3&text_color=ffffff&bg_color=0d1117&langs_count=6" 
+              alt="Top Languages" 
+            />
+          </motion.div>
+        </div>
+        
+        <motion.div 
+          className="streak-container glass"
+          whileHover={{ scale: 1.01 }}
+          transition={{ duration: 0.3 }}
+        >
+          <div className="card-label">Contribution Streak</div>
+          <img 
+            src="https://github-readme-streak-stats.herokuapp.com/?user=SujalPatelDeveloper&theme=tokyonight&hide_border=true&stroke=00df9a&ring=ff7eb3&fire=ff7eb3&currStreakLabel=00df9a&sideNums=ffffff&sideLabels=ffffff&dates=ffffff&background=0d1117" 
+            alt="GitHub Streak" 
+            loading="lazy"
+          />
+        </motion.div>
       </motion.div>
     </div>
   );
