@@ -30,29 +30,35 @@ const ContactPage = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.3 }}
         >
-          <div className="contact-card glass mini-info">
-             <h3 className="section-title" style={{ fontSize: '1.5rem', marginBottom: '1.5rem' }}>Direct Links</h3>
-             <a href="mailto:hello@sujal.design" className="btn btn-outline contact-btn" style={{ width: '100%', marginBottom: '1.5rem' }}>
-              hello@sujal.design
-            </a>
-            <div className="social-links-grid">
-              <a href="#" className="social-box glass">
-                <span>LinkedIn</span>
+          <div className="info-card contact-sidebar-card">
+            <div className="sidebar-section">
+              <h3 className="card-title">Direct Links</h3>
+              <a href="mailto:sujalpatel.developer@gmail.com" className="btn btn-outline email-btn">
+                sujalpatel.developer@gmail.com
               </a>
-              <a href="#" className="social-box glass">
-                <span>GitHub</span>
-              </a>
+              <div className="social-links-grid">
+                <a href="https://www.linkedin.com/in/sujalpateldeveloper" target="_blank" rel="noopener noreferrer" className="social-box">
+                  <span>LinkedIn</span>
+                </a>
+                <a href="https://github.com/SujalPatelDeveloper" target="_blank" rel="noopener noreferrer" className="social-box">
+                  <span>GitHub</span>
+                </a>
+              </div>
             </div>
-          </div>
 
-          <div className="contact-method-group">
-            <div className="contact-method">
-              <h3>Availability</h3>
-              <p>Mon — Fri, 9am — 6pm IST</p>
-            </div>
-            <div className="contact-method">
-              <h3>Based In</h3>
-              <p>Ahmedabad, Gujarat</p>
+            <div className="sidebar-section">
+              <div className="info-item">
+                <span className="info-label">Availability</span>
+                <span className="info-value">Mon — Fri, 9am — 6pm IST</span>
+              </div>
+              <div className="info-item">
+                <span className="info-label">Based In</span>
+                <span className="info-value">Gandhinagar- Gujarat</span>
+              </div>
+              <div className="info-item">
+                <span className="info-label">Response Time</span>
+                <span className="info-value">Typically within 24 hours</span>
+              </div>
             </div>
           </div>
         </motion.div>

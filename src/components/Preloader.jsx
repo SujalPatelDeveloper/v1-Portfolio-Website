@@ -9,7 +9,7 @@ const Preloader = ({ onFinish }) => {
     const timer = setTimeout(() => {
       setIsVisible(false);
       setTimeout(onFinish, 800); // Allow time for exit animation
-    }, 2000);
+    }, 1200);
 
     return () => clearTimeout(timer);
   }, [onFinish]);

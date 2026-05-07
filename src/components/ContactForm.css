@@ -1,26 +1,30 @@
 .contact-form-container {
-  margin-top: 4rem;
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
 }
 
 .form-wrapper {
-  padding: 3rem;
+  padding: 2.5rem;
+  background: #ffffff;
   border: 1px solid var(--border-color);
   box-shadow: var(--card-shadow);
+  border-radius: var(--card-radius);
 }
 
 .form-wrapper h3 {
   font-family: var(--font-display);
-  font-size: 2rem;
+  font-size: 1.75rem;
+  font-weight: 800;
   margin-bottom: 0.5rem;
   color: var(--text-primary);
 }
 
 .form-wrapper p {
   color: var(--text-secondary);
-  margin-bottom: 2.5rem;
+  font-size: var(--font-base);
+  margin-bottom: 2rem;
+  opacity: 0.8;
 }
 
 .sketchy-form {
@@ -32,24 +36,22 @@
 .form-group input,
 .form-group textarea {
   width: 100%;
-  padding: 1.2rem;
+  padding: 1rem 1.25rem;
   background: var(--bg-secondary);
-  border: 2px solid var(--border-color);
-  border-radius: 16px;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
   font-family: var(--font-sans);
-  font-size: var(--font-base);
+  font-size: var(--font-sm);
   color: var(--text-primary);
   transition: var(--transition);
   outline: none;
 }
 
-/* Sketchy focus effect */
 .form-group input:focus,
 .form-group textarea:focus {
   border-color: var(--accent-color);
-  border-radius: 12px 18px 14px 16px; /* Random rounded corners for sketch look */
-  transform: scale(1.01);
   background: white;
+  box-shadow: 0 0 0 4px rgba(0, 223, 154, 0.1);
 }
 
 .submit-btn {

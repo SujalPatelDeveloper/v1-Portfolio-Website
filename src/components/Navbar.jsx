@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import resumeFile from '../assets/resume/SujalPatelResume.pdf';
 import './Navbar.css';
 
 const Navbar = () => {
@@ -37,11 +38,11 @@ const Navbar = () => {
           <Link to="/about" className={isActive('/about') ? 'active' : ''} onClick={closeMenu}>About</Link>
           <Link to="/contact" className={`nav-cta ${isActive('/contact') ? 'active' : ''}`} onClick={closeMenu}>Let's Talk</Link>
           <a 
-            href="/resume.pdf" 
+            href={resumeFile} 
             className="nav-resume" 
             target="_blank" 
             rel="noopener noreferrer"
-            download
+            download="SujalPatelResume.pdf"
           >
             Resume
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">

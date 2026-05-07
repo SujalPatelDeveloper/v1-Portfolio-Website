@@ -1,67 +1,112 @@
-# Sujal Patel | Full-Stack Developer Portfolio
+# 🎨 Sujal Patel | Full-Stack Developer Portfolio
 
-A high-end, creative, and interactive portfolio website built with React, Framer Motion, and a custom doodle-inspired design system.
+<div align="center">
+  <img src="public/favicon.svg" width="120" height="120" alt="Sujal Patel Logo" />
+  <h3>Building Digital Experiences with Creativity & Code</h3>
+  
+  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+  [![React](https://img.shields.io/badge/React-19.x-61DAFB?logo=react&logoColor=black)](https://react.dev/)
+  [![Vite](https://img.shields.io/badge/Vite-8.x-646CFF?logo=vite&logoColor=white)](https://vitejs.dev/)
+  [![Framer Motion](https://img.shields.io/badge/Framer_Motion-12.x-0055FF?logo=framer&logoColor=white)](https://www.framer.com/motion/)
+  [![CSS3](https://img.shields.io/badge/Style-Vanilla_CSS-1572B6?logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
 
-![Portfolio Screenshot](public/favicon.svg) <!-- Replace with a real screenshot if available -->
+  **[✨ Live Demo](https://sujalpateldeveloper.vercel.app/)**
+</div>
+
+---
 
 ## 🚀 Overview
 
-This portfolio showcases the work, skills, and academic background of **Sujal Patel**, an aspiring Full-Stack Developer. The design features a playful "doodle-verse" background, 3D-inspired visuals, and a custom interactive cursor, creating a unique and memorable user experience.
+Welcome to my personal portfolio! This project is a high-end, interactive digital space designed to showcase my journey as a **Full-Stack Developer**. Built with a focus on visual excellence and immersive user experience, it features a unique **"Doodle-Verse"** aesthetic that blends professional expertise with creative flair.
 
 ## ✨ Key Features
 
-- **Dynamic Doodle Background**: A rich collection of over 60+ hand-drawn SVGs distributed across the site with floating animations.
-- **Custom Interactive Cursor**: A bespoke wobbly cursor that reacts to hover states and click events.
-- **Responsive Grid Layout**: A modern asymmetrical layout inspired by poster design and 3D perspectives.
-- **Smooth Animations**: Powered by `framer-motion` for fluid section transitions and interactive elements.
-- **Multi-page Architecture**: Built with `react-router-dom` featuring dedicated pages for Projects, About, and Contact.
-- **SEO Optimized**: Implements best practices for search engine visibility and performance.
+- **🌀 Interactive Doodle-Verse**: A dynamic background system featuring 60+ hand-drawn SVGs with floating animations and physics-inspired interactions.
+- **🎯 Bespoke Custom Cursor**: A wobbly, reactive cursor that transforms based on interaction states (hover, click, drag).
+- **🏗️ Modern Layout Architecture**: A responsive, 3D-inspired grid system that breaks the traditional "flat" web design mold.
+- **🎭 Fluid Animations**: Seamless page transitions and micro-interactions powered by `framer-motion` and optimized CSS transitions.
+- **📱 Fully Responsive**: Crafted for a premium experience across all devices, from ultra-wide monitors to mobile screens.
+- **⚡ Performance Optimized**: Fast load times with optimized assets and a sleek custom preloader.
+
+## 🌟 Featured Projects
+
+| Project | Live Demo | Source Code |
+| :--- | :--- | :--- |
+| **FinVista - Expense Tracker** | [🚀 Live](https://fin-vista-expense-tracker.vercel.app/) | [📁 GitHub](https://github.com/SujalPatelDeveloper/FinVista-Expense-Tracker) |
+| **Personal Portfolio** | [🚀 Live](https://sujalpateldeveloper.vercel.app/) | [📁 GitHub](https://github.com/SujalPatelDeveloper/v1-Portfolio-Website) |
 
 ## 🛠️ Tech Stack
 
-- **Frontend**: React, Next.js (parts), CSS3 (Vanilla)
-- **Animations**: Framer Motion, GSAP
-- **Routing**: React Router DOM
-- **State Management**: React Hooks
-- **Icons & Graphics**: Custom SVG Doodles, Phosphor Icons
-- **Build Tool**: Vite
+- **Core**: [React 19](https://reactjs.org/)
+- **Build Tool**: [Vite](https://vitejs.dev/)
+- **Styling**: Vanilla CSS (Custom Design System)
+- **Animations**: [Framer Motion](https://www.framer.com/motion/)
+- **Routing**: [React Router 7](https://reactrouter.com/)
+- **Icons**: Phosphor Icons & Custom SVG Library
 
-## 📁 Project Structure
+## 📂 Project Structure
 
 ```text
 src/
-├── assets/          # Images, SVGs, and Doodle library
-├── components/      # Reusable UI components (Navbar, Hero, Work, etc.)
-├── hooks/           # Custom React hooks
-├── pages/           # Page-level components (Projects, About, Contact)
-└── style.css        # Global styles and design tokens
+├── assets/          # Brand assets, Doodle library, and static media
+├── components/      # Reusable UI components (Hero, Navbar, DoodleBackground, etc.)
+├── hooks/           # Custom React hooks for logic reuse
+├── pages/           # High-level page components (Projects, About, Contact)
+├── style.css        # Global CSS variables and design tokens
+└── App.jsx          # Root component & Routing configuration
 ```
 
 ## 🚀 Getting Started
 
-1. **Clone the repository**:
-   ```bash
+To get a local copy up and running, follow these simple steps:
+
+### Prerequisites
+* npm
+  ```sh
+  npm install npm@latest -g
+  ```
+
+### Installation
+1. **Clone the repository**
+   ```sh
    git clone https://github.com/SujalPatelDeveloper/Portfolio-Website.git
    ```
-
-2. **Install dependencies**:
-   ```bash
+2. **Install NPM packages**
+   ```sh
    npm install
    ```
-
-3. **Run the development server**:
-   ```bash
+3. **Start the development server**
+   ```sh
    npm run dev
    ```
 
-4. **Build for production**:
-   ```bash
-   npm run build
-   ```
+## 🛠️ Contact Form Setup
 
-## 📄 License
+The contact form is powered by [EmailJS](https://www.emailjs.com/). To make it functional:
 
-This project is licensed under the MIT License.
+1.  Create a free account at [EmailJS](https://www.emailjs.com/).
+2.  Add a **Email Service** (e.g., Gmail) and note your **Service ID**.
+3.  Create a **Email Template** and note your **Template ID**.
+4.  Go to **Account -> Public Key** and note your **Public Key**.
+5.  Open your `.env` file and add your credentials:
+    ```env
+    VITE_EMAILJS_SERVICE_ID=your_service_id
+    VITE_EMAILJS_TEMPLATE_ID=your_template_id
+    VITE_EMAILJS_PUBLIC_KEY=your_public_key
+    ```
+6.  Restart the development server.
+
+## 📬 Contact Me
+
+Feel free to reach out for collaborations or just a friendly hello!
+
+* **GitHub**: [@SujalPatelDeveloper](https://github.com/SujalPatelDeveloper)
+* **LinkedIn**: [Sujal Patel](https://www.linkedin.com/in/sujalpateldeveloper)
+* **Email**: [sujalpatel.developer@gmail.com](mailto:sujalpatel.developer@gmail.com)
 
 ---
-Designed & Built with ❤️ by [Sujal Patel](https://github.com/SujalPatelDeveloper)
+
+<div align="center">
+  <p>Designed & Built with ❤️ by <b>Sujal Patel</b></p>
+  <p>© 2026 Sujal Patel. All Rights Reserved.</p>
+</div>

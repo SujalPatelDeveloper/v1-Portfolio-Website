@@ -1,9 +1,9 @@
 .hero {
-  min-height: 90vh; /* Reduced min-height to pull content up */
+  min-height: 90vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 40px 2rem 40px;
+  padding: 120px 2rem 40px; 
   position: relative;
 }
 
@@ -59,7 +59,7 @@
 }
 
 .poster-title {
-  font-family: var(--font-display);
+  font-family: sans-serif;
   font-size: clamp(3rem, 8vw, 7rem);
   font-weight: 900;
   line-height: 0.85;

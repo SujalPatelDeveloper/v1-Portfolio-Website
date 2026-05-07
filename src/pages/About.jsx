@@ -25,25 +25,67 @@ const AboutPage = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <p className="about-text">
-            I'm an Aspiring Full-Stack Developer skilled in React, Next.js, and real-time applications using WebSockets. 
-            I'm experienced in building scalable, responsive web apps with a strong focus on performance and user experience. 
-            Currently pursuing Computer Science Engineering at Adani University.
-          </p>
-          <div className="skills-container">
-            <h3>My Toolkit</h3>
-            <div className="skills-grid">
-              {['React', 'Next.js', 'JavaScript', 'Python', 'Node.js', 'Socket.io', 'Supabase', 'Firebase', 'Framer Motion', 'GSAP', 'HTML / CSS'].map((skill, i) => (
-                <motion.span 
-                  key={skill} 
-                  className="skill-tag"
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ delay: i * 0.1 }}
-                >
-                  {skill}
-                </motion.span>
-              ))}
+          <div className="info-card">
+            <p className="about-text">
+              I'm an Aspiring Full-Stack Developer skilled in React, Next.js, and real-time applications using WebSockets. 
+              I'm experienced in building scalable, responsive web apps with a strong focus on performance and user experience. 
+              Currently pursuing Computer Science Engineering at Adani University.
+            </p>
+            <div className="skills-container">
+              <h3 className="toolkit-title">The <span className="text-highlight">Tools</span> I use to build</h3>
+              
+              <div className="skills-category-group">
+                <div className="skill-category">
+                  <h4>Core Development</h4>
+                  <div className="skills-grid">
+                    {['HTML', 'CSS', 'JavaScript', 'React', 'Next.js', 'Python'].map((skill, i) => (
+                      <motion.span 
+                        key={skill} 
+                        className="skill-tag"
+                        initial={{ opacity: 0, scale: 0.9 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ delay: i * 0.05 }}
+                      >
+                        {skill}
+                      </motion.span>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="skill-category">
+                  <h4>Motion & Experience</h4>
+                  <div className="skills-grid">
+                    {['GSAP', 'Framer'].map((skill, i) => (
+                      <motion.span 
+                        key={skill} 
+                        className="skill-tag"
+                        initial={{ opacity: 0, scale: 0.9 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ delay: 0.3 + i * 0.05 }}
+                      >
+                        {skill}
+                      </motion.span>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="skill-category">
+                  <h4>Infrastructure & AI</h4>
+                  <div className="skills-grid">
+                    {['Supabase', 'EmailJS', 'Git', 'GitHub', 'AI-Assisted Dev'].map((skill, i) => (
+                      <motion.span 
+                        key={skill} 
+                        className="skill-tag"
+                        initial={{ opacity: 0, scale: 0.9 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ delay: 0.4 + i * 0.05 }}
+                      >
+                        {skill}
+                      </motion.span>
+                    ))}
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </motion.div>
@@ -54,7 +96,7 @@ const AboutPage = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <div className="info-card glass">
+          <div className="info-card info-card-tall">
             <div className="info-item">
               <span className="info-label">Location</span>
               <span className="info-value">Ahmedabad, Gujarat</span>
@@ -67,6 +109,22 @@ const AboutPage = () => {
               <span className="info-label">Status</span>
               <span className="info-value">Open for Opportunities</span>
             </div>
+            <div className="info-item">
+              <span className="info-label">Experience</span>
+              <span className="info-value">1+ Year of Building</span>
+            </div>
+            <div className="info-item">
+              <span className="info-label">Availability</span>
+              <span className="info-value">Freelance & Internships</span>
+            </div>
+            <div className="info-item">
+              <span className="info-label">Interests</span>
+              <span className="info-value">UI/UX, Open Source, Problem Solving</span>
+            </div>
+            <div className="info-item">
+              <span className="info-label">Languages</span>
+              <span className="info-value">English, Hindi, Gujarati</span>
+            </div>
           </div>
         </motion.div>
       </div>
@@ -78,10 +136,40 @@ const AboutPage = () => {
         transition={{ delay: 0.5 }}
       >
         <h3>Education & Journey</h3>
-        <div className="education-block">
-          <p><strong>Computer Science Engineering</strong> - Adani University</p>
-          <p className="date">2023 – Present | Ahmedabad, Gujarat</p>
-          <p className="cgpa">CGPA: 7.43</p>
+        <div className="education-timeline">
+          <div className="education-item">
+            <div className="timeline-dot"></div>
+            <div className="education-content">
+              <h4>B.Tech in Computer Science & Engineering</h4>
+              <p className="institution">Adani University</p>
+              <p className="date">2023 - 2027 | Ahmedabad, Gujarat</p>
+              <p className="education-desc">
+                Currently in my 3rd year, I am building a strong foundation in core CS principles. My academic journey is centered around understanding how complex systems work and applying that logic to the modern web.
+              </p>
+              <div className="education-footer">
+                <span className="cgpa-badge">CGPA: 7.43 / 10</span>
+              </div>
+              <div className="relevant-coursework">
+                <span className="coursework-label">Relevant Coursework:</span>
+                <p>Web Application Development • Front End Development • Database Management • Data Structures & Algorithms</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="education-item">
+            <div className="timeline-dot"></div>
+            <div className="education-content">
+              <h4>Higher Secondary Education (12th Science)</h4>
+              <p className="institution">CBSE Board</p>
+              <p className="date">2021 – 2023</p>
+              <p className="education-desc">
+                Completed my secondary education with a focus on Physics, Chemistry, and Mathematics (PCM), providing a strong logical and analytical base for my engineering studies.
+              </p>
+              <div className="education-footer">
+                <span className="cgpa-badge">Score: 79.2%</span>
+              </div>
+            </div>
+          </div>
         </div>
       </motion.div>
       
@@ -97,7 +185,7 @@ const AboutPage = () => {
         
         <div className="stats-grid">
           <motion.div 
-            className="stats-card glass"
+            className="stats-card"
             whileHover={{ y: -5, transition: { duration: 0.2 } }}
           >
             <div className="card-label">Overall Stats</div>
@@ -108,7 +196,7 @@ const AboutPage = () => {
           </motion.div>
 
           <motion.div 
-            className="stats-card glass"
+            className="stats-card"
             whileHover={{ y: -5, transition: { duration: 0.2 } }}
           >
             <div className="card-label">Language Proficiency</div>
@@ -120,7 +208,7 @@ const AboutPage = () => {
         </div>
         
         <motion.div 
-          className="streak-container glass"
+          className="streak-container"
           whileHover={{ scale: 1.01 }}
           transition={{ duration: 0.3 }}
         >

@@ -11,7 +11,7 @@
 
   /* Fonts */
   --font-sans: 'Inter', sans-serif;
-  --font-display: 'Outfit', sans-serif;
+  --font-display: 'Inter', sans-serif;
   --font-mono: 'Fira Code', monospace;
 
   /* Theme Colors (Playful Modern Light) */
@@ -74,6 +74,8 @@ main {
   max-width: 1400px;
   margin: 0 auto;
   padding: 0 2rem;
+  position: relative;
+  z-index: 1;
 }
 
 .section {
@@ -119,7 +121,7 @@ main {
 }
 
 .btn-outline {
-  background-color: transparent;
+  background-color: var(--bg-primary);
   border-color: var(--text-primary);
   color: var(--text-primary);
 }
@@ -143,11 +145,56 @@ main {
 
 /* Glassmorphism for floating elements */
 .glass {
-  background: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: #ffffff;
+  border: 1px solid var(--border-color);
   border-radius: var(--card-radius);
+  box-shadow: var(--card-shadow);
+}
+
+.info-card {
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  background-color: #ffffff;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--card-shadow);
+  height: 100%;
+  position: relative;
+  z-index: 5;
+  border-radius: var(--card-radius);
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding-left: 1.25rem;
+  border-left: 2px solid var(--border-color);
+  transition: border-color 0.3s ease;
+}
+
+.info-item:hover {
+  border-left-color: var(--accent-color);
+}
+
+.info-label {
+  font-size: var(--font-xs);
+  color: var(--text-secondary);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.25rem;
+  opacity: 0.7;
+}
+
+.info-value {
+  font-family: var(--font-display);
+  font-size: var(--font-lg);
+  font-weight: 800;
+  color: var(--text-primary);
+  line-height: 1.2;
+  letter-spacing: -0.01em;
 }
 
 /* Animations */

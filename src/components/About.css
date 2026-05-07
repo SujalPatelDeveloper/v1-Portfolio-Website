@@ -1,8 +1,12 @@
+.about {
+  padding-top: 4rem;
+}
+
 .about-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   flex-wrap: wrap;
   gap: 1rem;
 }
@@ -15,75 +19,75 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 6rem;
-  align-items: center;
+  align-items: stretch;
+  position: relative;
+  z-index: 5;
+  margin-top: -1rem;
 }
 
 .about-text {
-  font-size: var(--font-lg);
+  font-size: var(--font-base);
   color: var(--text-secondary);
-  margin-bottom: 3rem;
-  line-height: 1.8;
+  margin-bottom: 0;
+  line-height: 1.6;
 }
 
-.skills-container h3 {
+.toolkit-title {
   font-family: var(--font-display);
-  font-size: var(--font-base);
-  margin-bottom: 1.5rem;
+  font-size: var(--font-lg);
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-top: 2rem;
+  margin-bottom: 2rem;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: -0.01em;
+}
+
+.text-highlight {
+  color: var(--accent-color);
+}
+
+.skills-category-group {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.skill-category h4 {
+  font-size: 11px;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: 1.25rem;
+  font-weight: 800;
+  opacity: 0.6;
 }
 
 .skills-grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 0.75rem;
 }
 
 .skill-tag {
-  padding: 0.6rem 1.2rem;
+  padding: 0.5rem 1rem;
   background: white;
   border: 1px solid var(--border-color);
   border-radius: 12px;
-  font-weight: 600;
-  font-size: var(--font-sm);
+  font-weight: 700;
+  font-size: 13px;
+  color: var(--text-primary);
   transition: var(--transition);
 }
 
 .skill-tag:hover {
   border-color: var(--accent-color);
-  background: var(--bg-secondary);
-  transform: translateY(-3px);
+  color: var(--accent-color);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 223, 154, 0.1);
 }
 
-.info-card {
-  padding: 3rem;
-  display: flex;
-  flex-direction: column;
-  gap: 2.5rem;
-  border: 1px solid var(--border-color);
-  box-shadow: var(--card-shadow);
-}
 
-.info-item {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.info-label {
-  font-size: var(--font-xs);
-  color: var(--text-secondary);
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-
-.info-value {
-  font-family: var(--font-display);
-  font-size: var(--font-xl);
-  font-weight: 800;
-  color: var(--text-primary);
-}
 
 @media (max-width: 1024px) {
   .about-grid {
@@ -112,6 +116,22 @@
     align-items: flex-start;
     gap: 1rem;
   }
+}
+
+.info-card-tall {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 3rem !important;
+}
+
+.info-card-tall .info-item {
+  margin-bottom: 0.5rem;
+}
+
+.card-footer-action {
+  margin-top: auto;
 }
 
 @media (max-width: 480px) {

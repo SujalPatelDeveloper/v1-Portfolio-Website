@@ -1,34 +1,36 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import emailjs from '@emailjs/browser';
 import './ContactForm.css';
 
 const ContactForm = () => {
   const [status, setStatus] = useState("");
+  const formRef = useRef();
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     setStatus("sending");
-    
-    const formData = new FormData(e.target);
-    formData.append("access_key", "YOUR_ACCESS_KEY_HERE"); // The user will need to replace this or I can provide instructions
 
-    try {
-      const response = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        body: formData
-      });
+    const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+    const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
-      const data = await response.json();
+    if (!serviceId || !templateId || !publicKey) {
+      console.error("EmailJS credentials missing!");
+      setStatus("error");
+      return;
+    }
 
-      if (data.success) {
+    emailjs.sendForm(serviceId, templateId, formRef.current, publicKey)
+      .then((result) => {
         setStatus("success");
         e.target.reset();
-      } else {
+        setTimeout(() => setStatus(""), 5000);
+      }, (error) => {
+        console.error("EmailJS Error:", error);
         setStatus("error");
-      }
-    } catch (error) {
-      setStatus("error");
-    }
+        setTimeout(() => setStatus(""), 5000);
+      });
   };
 
   return (
@@ -42,7 +44,7 @@ const ContactForm = () => {
         <h3>Send me a Message</h3>
         <p>I'm always open to discussing new projects or creative ideas.</p>
 
-        <form onSubmit={handleSubmit} className="sketchy-form">
+        <form ref={formRef} onSubmit={handleSubmit} className="sketchy-form">
           <div className="form-group">
             <input type="text" name="name" placeholder="Your Name" required />
           </div>

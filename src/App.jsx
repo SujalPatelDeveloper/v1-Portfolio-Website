@@ -36,21 +36,23 @@ function App() {
       <div className="app-wrapper">
         <ScrollToTop />
         {loading && <Preloader onFinish={() => setLoading(false)} />}
-        <div className="app-root">
-          <CustomCursor />
-          <DoodleBackground />
-          <Navbar />
-          <main key={refreshKey}>
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/projects" element={<ProjectsPage />} />
-              <Route path="/about" element={<AboutPage />} />
-              <Route path="/contact" element={<ContactPage />} />
-            </Routes>
-          </main>
-          <Footer />
-          <ScrollTopButton onScrollTop={handleRefreshAnimations} />
-        </div>
+        {!loading && (
+          <div className="app-root">
+            <CustomCursor />
+            <DoodleBackground />
+            <Navbar />
+            <main key={refreshKey}>
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/projects" element={<ProjectsPage />} />
+                <Route path="/about" element={<AboutPage />} />
+                <Route path="/contact" element={<ContactPage />} />
+              </Routes>
+            </main>
+            <Footer />
+            <ScrollTopButton onScrollTop={handleRefreshAnimations} />
+          </div>
+        )}
       </div>
     </Router>
   );

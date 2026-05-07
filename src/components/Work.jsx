@@ -3,24 +3,25 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import './Work.css';
 
+import portfolioImg from '../assets/images/PersonalPortfolioWebsiteLight.png';
+import finvistaImg from '../assets/images/FinVista_Dashboard_Light.png';
+
 const projects = [
   {
-    title: "Real-Time Collaboration App",
-    category: "Full-Stack / WebSockets",
-    color: "#00df9a",
-    desc: "A real-time platform with shared rooms and low-latency multi-user synchronization."
+    title: "Personal Portfolio Website",
+    category: "React • Framer Motion",
+    image: portfolioImg,
+    color: "#facc15",
+    desc: "A modern, high-performance portfolio featuring smooth Framer Motion animations and a responsive design. (This Project)",
+    link: "https://sujalpateldeveloper.vercel.app/"
   },
   {
-    title: "Code-Editor",
-    category: "Web Tooling",
-    color: "#ff7eb3",
-    desc: "Web-based editor with syntax highlighting and real-time collaboration features."
-  },
-  {
-    title: "Personal Expense Tracker",
-    category: "Full-Stack",
+    title: "FinVista - Expense Tracker",
+    category: "React • Supabase • Recharts",
+    image: finvistaImg,
     color: "#4285f4",
-    desc: "Full-stack tracker with real-time syncing, analytics, and PDF export functionality."
+    desc: "A comprehensive financial dashboard with real-time data syncing, expense analytics, and secure Supabase authentication.",
+    link: "https://fin-vista-expense-tracker.vercel.app/"
   }
 ];
 
@@ -55,13 +56,16 @@ const Work = () => {
             }}
           >
             <div className="card-image" style={{ backgroundColor: project.color }}>
+              <img src={project.image} alt={project.title} className="project-thumb" />
               <div className="card-pill tag">{project.category}</div>
             </div>
             <div className="card-content">
               <h3>{project.title}</h3>
               <p>{project.desc}</p>
               <div className="card-footer">
-                <span className="view-project">View Project →</span>
+                <a href={project.link} target="_blank" rel="noopener noreferrer" className="view-project">
+                  View Project →
+                </a>
               </div>
             </div>
           </motion.div>
